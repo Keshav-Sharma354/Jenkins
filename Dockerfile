@@ -4,7 +4,7 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install httpd zip wget unzip -y
 RUN wget -O /var/www/html/oxer.zip https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip
 WORKDIR /var/www/html
-RUN mkdir  space
+RUN mkdir space
 RUN unzip oxer.zip
 RUN cp -rf oxer-html/* . &&\
     rm -rf oxer-html
